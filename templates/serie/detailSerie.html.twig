@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{serie.name}}{% endblock %}
+
+{% block body %}
+
+    
+       
+        <div class="container">
+        
+            <img class="img_serie" src="{{asset('img/posters/series/'~serie.getPoster)}}" width="300px"></img>
+            <div class="infoSerie">
+                <h1>{{serie.name}}</h1>
+                <div>{{serie.genres}}</div>
+                <div>{{serie.overview}}</div>
+                <div>{{serie.popularity}}</div>
+                <div>{{serie.getFirstAirDate|date("d/m/Y")}}</div>
+            </div>
+
+        </div>
+
+
+{% endblock %}

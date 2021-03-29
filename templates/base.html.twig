@@ -11,12 +11,26 @@
         {% endblock %}
     </head>
     <body>
-         
+        <div class="navbar">
+            <nav>
+                <div class="logo">
+                    <a href="{{ path('home') }}"><img class="img_serie" src="{{asset('img/logo.svg')}}"></img>Php SerIe</a>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#">Se connecter</a></li>
+                    <li><a href="{{ path('home') }}">Accueil</a></li>
+                    <li><a href="#">Séries</a></li>
+                    <li><a href="#">A propos de nous</a></li>
+                </ul>
+            </nav>
+        </div>
     {% block body %}{% endblock %}
 
     {% block js %}{% endblock %}
    
     </body>
+    <footer>@Copyright Gael H.</footer>
 </html>
 
 

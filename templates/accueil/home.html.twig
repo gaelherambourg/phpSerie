@@ -4,21 +4,15 @@
 
 {% block body %}
 
-    <div class="navbar">
-        <nav>
-            <div class="logo">
-                <a href="#">Php SerIe</a>
-            </div>
-
-            <ul class="nav-links">
-                <li><a href="#">Se connecter</a></li>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Séries</a></li>
-                <li><a href="#">A propos de nous</a></li>
-            </ul>
-        </nav>
     
-    </div>
+        <div class="container">
+        {% for serie in series %}
+
+            <a class="img_serie" href="{{ path("detailSerie", {id:serie.id} )}}"><img class="img_serie" src="{{asset('img/posters/series/'~serie.getPoster)}}" width="180px"></img></a>
+
+        {% endfor %}
+        </div>
+
 
 
 {% endblock %}
